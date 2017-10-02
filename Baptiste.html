@@ -6,9 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+        function ttdonnees() {
+            var data = document.formulaire.nom.value;
+            document.getElementById('resultat').innerHTML = data;
+        }
+    </script>
 </head>
 
 <body>
+    <h1>formulaire</h1>
+    <p>Les champs avec * sont obligatoires</p>
+    <form name="formulaire" action="" method="post">
+        <pre>
+        
+        Nom:     <input type="text" size="40" name="nom">
+        Mot de Passe:  <input type="text" size="40" name="mot_de_passe">
+        Confirmez le mot de Passe:  <input type="text" size="40" name="mot_de_passe2">
+        Courriel:   <input type="text" size="40" name="courriel">
+        
+        formulaire: <input type="submit" onClick='ttdonnees()' value="Envoyer"><input type="reset" value="Tout enlever">
+        
+        
+        </pre>
+    </form>
+    <div id="resultat">
+
+    </div>
 
 </body>
 
